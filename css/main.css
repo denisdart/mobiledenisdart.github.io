@@ -1,0 +1,503 @@
+*, *:after, *:before {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	transition: .5s ease-in-out; /* добавим плавность переходов для всех элементов страницы*/
+}
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	outline: none;
+}
+img {
+	display: block;
+	width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: "MontserratBold";
+	font-weight: normal;
+	text-transform: uppercase;
+}
+body {
+	font-family: "RobotoRegular", sans-serif;
+	font-size: 14px;
+	line-height: 1;
+	color: #373737;
+	background: #f7f7f7;
+}
+/* добавим очистку потока для всех контейнеров, внутри которых задано обтекание дочерних элементов */
+header:after, .container:after, footer:after, .widget-posts-list li:after, #subscribe:after {
+	content: "";
+	display: table;
+	clear: both;
+} 
+/* стилевой класс, который управляет шириной контейнера сетки*/
+.container {
+	position: relative;
+	margin: 0 auto;
+	max-width: 1200px;
+	padding: 0 15px;
+}
+
+.logo-head {
+	display: block;
+	position: relative;
+}
+
+.logo {
+	width: 191px;
+	height: 52px;
+	margin-top: 10px;
+	background-image: url(../img/logo.png);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.shop-cart {
+	display: block;
+	position: relative;
+	float: right;
+}
+
+.basket {
+	width: 40px;
+	height: 40px;
+	margin-top: 14px;
+	background-image: url(../img/shopping-basket-1.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.head-line {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 2px;
+	margin-top: 10px;
+	background: #777777;
+	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.slider-photo {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.steps {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 460px;
+	background: url(../img/bg-steps.png);
+	text-align: center;
+}
+
+.steps::before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 460px;
+	background: rgba(60, 87, 229, 0.8);
+}
+
+.steps h1 {
+	margin-top: 30px;
+	line-height: 30px;
+	color: #fff;
+	font-size: 22px;
+}
+
+.step-1 {
+	margin-top: 40px;
+}
+
+.step-count {
+	display: block;
+	position: absolute;
+	width: 70px;
+	height: 70px;
+	margin-top: -6px;
+	margin-left: 10px;
+	background: #FFFFFF;
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 10px;
+	transform: rotate(45deg);
+	z-index: 2;
+}
+
+.step-content {
+	display: block;
+	position: relative;
+	width: 80%;
+	height: 60px;
+	left: 25px;
+	padding-left: 45px;
+	padding-top: 15px;
+	margin: 0 auto;
+	margin-bottom: 50px;
+	text-align: left;
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.step-count p {
+	display: block;
+	position: absolute;
+	top: 10px;
+	left: 16px;
+	text-transform: uppercase;
+	font-size: 20px;
+	transform: rotate(-45deg);
+}
+
+.step-count p > span {
+	font-size: 38px;
+}
+
+.step-content p {
+	width: 180px;
+	font-size: 12px;
+	color: #727272;
+}
+
+.step-2 .step-content {
+	padding-top: 22px;
+}
+
+.step-img {
+	display: block;
+	position: absolute;
+	top: 13px;
+	right: 12px;
+	width: 40px;
+}
+
+.step-3 .step-img {
+	width: 50px;
+	top: 5px;
+	right: 8px;
+}
+
+/*ORDER*/
+
+.order {
+	width: 100%;
+	height: 1268px;
+	background-color: #EDF0FF;
+}
+
+.order h1 {
+	margin-top: 30px;
+	margin-bottom: 20px;
+	text-align: center;
+	font-size: 22px;
+}
+
+.order-block {
+	display: block;
+	position: relative;
+	width: 330px;
+	height: 378px;
+	margin: 0 auto 20px;
+	background-color: #FFFFFF;
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+}
+
+.order-block h2 {
+	font-family: "Roboto Medium";
+	text-transform: none;
+	text-align: center;
+	margin-top: 5px;
+	font-size: 16px;
+}
+
+.order-img {
+	margin: 0 auto;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 193px;
+}
+
+.order-brelok {
+	width: 220px;
+}
+
+.order-price {
+	display: block;
+	position: absolute;
+	top: 310px;
+	left: 0px;
+	width: 45%;
+	height: 60px;
+	padding-top: 10px;
+	background-color: #FFEB3B;
+	text-align: center;
+}
+
+.order-price span {
+	display: block;
+	position: relative;
+	font-weight: 600;
+	font-size: 36px;
+}
+
+.order-block .btn {
+	display: block;
+	position: absolute;
+	top: 312px;
+	right: 20px;
+	width: 123px;
+	height: 56px;
+	font-size: 18px;
+	padding-top: 12px;
+	color: #fff;
+	background-color: #FF3838;
+	border-radius: 50px;
+}
+
+.order-block .btn:active {
+	color: #FF3838;
+	background-color: #fff;
+	border: 2px solid #FF3838;
+}
+
+/*COMMENTS*/
+
+.comments {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 340px;
+	background-image: url(../img/bg-comments.png);
+	background-repeat: no-repeat;
+}
+
+.comments::before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 340px;
+	background: rgba(60, 87, 229, 0.8);
+}
+
+.comments h1 {
+	margin: 20px auto;
+	font-size: 24px;
+	color: #fff;
+}
+
+.delivery {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 425px;
+	background-color: #EDF0FF;
+}
+
+.delivery h1 {
+	margin: 20px auto;
+	font-size: 24px;
+}
+
+.block-deliver {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 70px;
+	background-color: #fff;
+	margin-bottom: 10px;
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+}
+
+.deliver-logo {
+	display: block;
+	position: relative;
+	margin-left: -4px;
+	float: left;
+	padding: 0px;
+	width: 130px;
+	height: 70px;
+	background-position: right center;
+}
+
+.self-logo {
+	background-image: url(../img/selfDelivery.svg);
+}
+
+.pochta-logo {
+	background-image: url(../img/pochtaDelivery.svg);
+}
+
+.sdek-logo {
+	background-image: url(../img/sdekDelivery.svg);
+}
+
+.deliver-content h2 {
+	text-transform: none;
+	font-family: "Roboto Medium";
+	font-size: 22px;
+	color: #3C57E5;
+}
+
+.deliver-content p {
+	display: block;
+	position: relative;
+	float: right;
+	padding-right: 20px;
+	font-size: 18px;
+	font-style: italic;
+}
+
+.deliver-content {
+	padding-top: 10px;
+}
+
+.oplata-block {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 85px;
+	margin-top: 20px;
+	background-color: #fff;
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+}
+
+.oplata-img {
+	display: block;
+	position: relative;
+	width: 31px;
+	height: 31px;
+	margin: 0 auto;
+	margin-top: 10px;
+	background-repeat: no-repeat;
+}
+
+.oplata-nal {
+	background-image: url(../img/coins.svg);
+}
+
+.oplata-schet {
+	margin-top: 15px;
+	width: 36px;
+	height: 26px;
+	background-image: url(../img/wallet.svg);	
+}
+
+.oplata-sber {
+	margin-top: 11px;
+	width: 33px;
+	height: 31px;
+	background-image: url(../img/Sberbank.svg);	
+}
+
+.oplata-title {
+	display: block;
+	position: relative;
+	width: 91px;
+	margin-top: 10px;
+	font-size: 12px;
+	text-align: center;
+}
+
+.oplata-block .col-4:nth-child(1) > .oplata-title {
+	margin: 0 auto;
+	margin-top: 10px;
+	width: 70px; 
+}
+
+.oplata-block .col-4:nth-child(3) > .oplata-title {
+	margin: 0 auto;
+	margin-top: 10px;
+	width: 70px; 
+}
+
+.contact {
+	display: block;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	margin-bottom: 10px;
+	width: 100%;
+	height: 380px;
+	background-color: #3C57E5;
+}
+
+.contact-block {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 380px;
+	text-align: center;
+}
+
+.contact-block h1 {
+	padding-top: 20px;
+	margin: 0 auto;
+	padding-bottom: 15px;
+	font-size: 24px;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.contact-content {
+	margin: 0 auto;
+	font-size: 16px;
+	color: #e5e5e5;
+	text-align: left;
+	line-height: 20px;
+}
+
+.contact-content b {
+	color: #fff;
+	font-size: 18px;
+}
+
+.copy-right {
+	font-size: 14px;
+	margin-top: 20px;
+	color: #fff;
+}
+
+.social-links {
+	display: inline-block;
+	position: relative;
+	margin-top: 10px;
+	width: 150px;
+	height: 50px;
+}
+
+.social-vk {
+	display: block;
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	background-image: url("../img/social-vk.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.social-vk:hover {
+	cursor: pointer;
+	opacity: 0.3;
+}
+
+.social-insta {
+	display: block;
+	position: absolute;
+	left: 100px;
+	width: 50px;
+	height: 50px;
+	background-image: url("../img/social-insta.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.social-insta:hover {
+	cursor: pointer;
+	opacity: 0.3;
+}
